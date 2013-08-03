@@ -1,5 +1,7 @@
 package wym;
 
+import junit.framework.TestCase;
+
 import java.io.*;
 import java.math.BigDecimal;
 import java.util.HashMap;
@@ -12,8 +14,12 @@ import java.util.Map;
  * Time: 下午11:41
  * To change this template use File | Settings | File Templates.
  */
-public class CompetitionTest {
+public class CompetitionTest extends TestCase{
     private Map<String, BigDecimal>ruleMap = new HashMap<String, BigDecimal>();
+
+    public void testMainFunction(){
+        mainFunction("d:\\input.txt");
+    }
 
     public void mainFunction(String filename){
         StringBuffer context = new StringBuffer();
